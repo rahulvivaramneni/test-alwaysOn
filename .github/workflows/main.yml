@@ -17,12 +17,6 @@ jobs:
         with:
           node-version: '20.x'
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build the project
-        run: npm run build
-
       - name: Deploy to Arweave
         run: npx permaweb-deploy --ant-process ${ANT_PROCESS_KEY}
         env:
