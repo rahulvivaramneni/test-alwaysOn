@@ -22,4 +22,4 @@ jobs:
           curl -X POST https://alwayson-backend.onrender.com/deploy \
             -H "Content-Type: application/json" \
             -H "Authorization: token ${{ secrets.AUTH_GITHUB_TOKEN }}" \
-            -d '{ "repoUrl": "https://github.com/rahulvivaramneni/test-arweave-vercel.git" }'
+            -d '{ "repoUrl": "https://github.com/rahulvivaramneni/helo-world-test-arweave-vercel.git" }'
