@@ -21,6 +21,7 @@ jobs:
         run: |
           RESPONSE=$(curl -X POST https://alwayson-backend.onrender.com/deploy \
             -H "Content-Type: application/json" \
-            -H "Authorization: token ${{ secrets.AUTH_GITHUB_TOKEN }}" \
-            -d '{ "repoUrl": "https://github.com/rahulvivaramneni/test-arweave-vercel.git" }')
-          echo "Response: $RESPONSE"
+            -d '{ "repoUrl": "https://github.com/rahulvivaramneni/test-alwaysOn.git" }' \
+            -w "%{http_code}" -o response.txt -s)
+          echo "Response Code: $RESPONSE"
+          cat response.txt
